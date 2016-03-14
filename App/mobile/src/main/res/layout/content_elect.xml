@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.akshayjagadeesh.represent.ElectActivity"
+    tools:showIn="@layout/activity_elect">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="2012 Election Results"
+        android:id="@+id/titleElection"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Obama"
+        android:id="@+id/textView4"
+        android:layout_marginTop="103dp"
+        android:textSize="35dp"
+        android:textColor="#0000FF"
+        android:layout_below="@+id/countyText"
+        android:layout_toStartOf="@+id/randbutton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Romney"
+        android:id="@+id/textView5"
+        android:textSize="35dp"
+        android:textColor="#FF0000"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignStart="@+id/Rpercent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Santa Clara County - CA"
+        android:id="@+id/countyText"
+        android:layout_below="@+id/titleElection"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="54%"
+        android:id="@+id/Opercent"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/textView4"
+        android:layout_toStartOf="@+id/randbutton"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="46%"
+        android:id="@+id/Rpercent"
+        android:layout_below="@id/textView5"
+        android:layout_alignTop="@+id/Opercent"
+        android:layout_toEndOf="@+id/randbutton"
+        android:textSize="35sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a random county!"
+        android:id="@+id/randbutton"
+        android:layout_marginTop="147dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Opercent" />
+
+</RelativeLayout>

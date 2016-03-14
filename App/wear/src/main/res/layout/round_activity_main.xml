@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.akshayjagadeesh.represent.MainActivity"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rep. Barbara Lee"
+        android:id="@+id/c1"
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Dem - CA"
+        android:id="@+id/party1"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/c1"
+        android:layout_alignStart="@+id/c1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="94720"
+        android:id="@+id/ziptext"
+        android:layout_below="@+id/party1"
+        android:layout_alignStart="@+id/party1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/or"
+        android:maxHeight="100sp"
+        android:maxWidth="75dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_above="@+id/textView"
+        android:layout_alignStart="@+id/c1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/lee"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:maxWidth="75dp"
+        android:maxHeight="150dp"
+        android:layout_below="@+id/c1"
+        android:layout_alignEnd="@+id/c1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="2012 Election Results"
+        android:id="@+id/textView"
+        android:textSize="5dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignEnd="@+id/ziptext" />
+
+</RelativeLayout>

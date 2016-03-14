@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.akshayjagadeesh.represent.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome! Enter your location."
+        android:id="@+id/welcomeText"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:id="@+id/locationLine"
+        android:paddingTop="16dp"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/zipText"
+            android:hint="Zip Code"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="80dp"
+            android:layout_toLeftOf="@id/middle"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <View
+            android:id="@+id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90sp"
+            android:id="@+id/locButton"
+            android:src="@drawable/location_icon"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_toRightOf="@id/middle"
+            android:maxHeight="75dp"
+            android:maxWidth="55dp"/>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/locationLine"
+        android:layout_marginTop="15dp"
+        android:id="@+id/congressTable"
+        android:layout_alignParentStart="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dip"
+            android:background="#FF909090"
+            android:layout_marginTop="20dp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/outputText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Your congressional representatives are:"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentStart="true" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/row1">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/congressman1"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/congressman1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Email: Rep.Lee@opencongress.gov \nWebsite: lee.house.gov"
+                    android:id="@+id/email1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="tweet1"
+                    android:id="@+id/tweet1"
+                    android:maxWidth="400dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/congressman1"
+                android:text="Democrat, CA - 13"
+                android:layout_gravity="right"
+                android:id="@+id/party1"/>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/lee"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:maxHeight="175sp"
+                android:maxWidth="125sp"
+                android:id="@+id/i1"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/row2">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/congressman2"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/congressman2"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Email: Sen.Boxer@opencongress.gov \nWebsite: boxer.senate.gov"
+                    android:id="@+id/email2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="tweet2"
+                    android:id="@+id/tweet2"
+                    android:maxWidth="400dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/congressman2"
+                android:id="@+id/party2"
+                android:text="Democrat, CA"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="right"/>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/boxer"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:maxHeight="175sp"
+                android:maxWidth="125sp"
+                android:id="@+id/i2"/>
+        </TableRow>
+
+
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/row3">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Senator Dianne Feinstein"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/congressman3"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Email: Sen.Feinstein@opencongress.gov \nWebsite: feinstein.senate.gov"
+                    android:id="@+id/email3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="ICYMI: Impt work by @SFChronicle highlighting #AIDS survivors. Let’s continue our fight for an AIDS-free generation."
+                    android:id="@+id/tweet3"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="400dp"
+                     />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/congressman3"
+                android:text="Democrat, CA"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="right"
+                android:id="@+id/party3"/>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/feinstein"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:maxHeight="175sp"
+                android:maxWidth="125sp"
+                android:id="@+id/i3"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/row4">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/congressman4"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Email: Sen.Feinstein@opencongress.gov \nWebsite: feinstein.senate.gov"
+                    android:id="@+id/email4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="tweet4"
+                    android:id="@+id/tweet4"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="400dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/congressman3"
+                android:text="Democrat, CA"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="right"
+                android:id="@+id/party4"/>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/feinstein"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:maxHeight="175sp"
+                android:maxWidth="125sp"
+                android:id="@+id/i4"/>
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/county"
+        android:layout_below="@+id/locationLine"
+        android:layout_alignStart="@+id/welcomeText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2012"
+        android:id="@+id/electionButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#0000FF" />
+
+</RelativeLayout>

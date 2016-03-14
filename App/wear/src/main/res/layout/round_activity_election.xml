@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.akshayjagadeesh.represent.ElectionActivity"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="2012 Election Results"
+        android:id="@+id/textView2"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Obama"
+        android:id="@+id/Obama"
+        android:layout_marginStart="25dp"
+        android:layout_alignTop="@+id/Romney"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Romney"
+        android:id="@+id/Romney"
+        android:layout_below="@+id/textView2"
+        android:layout_toEndOf="@+id/Obama"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="54%"
+        android:id="@+id/obamapercent"
+        android:textSize="25dp"
+        android:textColor="#0000FF"
+        android:layout_below="@+id/Obama"
+        android:layout_alignStart="@+id/Obama" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="46%"
+        android:id="@+id/romneypercent"
+        android:textSize="20dp"
+        android:textColor="#FF0000"
+        android:layout_alignBottom="@+id/obamapercent"
+        android:layout_alignEnd="@+id/Romney" />
+</RelativeLayout>

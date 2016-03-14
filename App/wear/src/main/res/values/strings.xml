@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Represent</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_election">ElectionActivity</string>
+    <string name="title_activity_election12">Election12Activity</string>
+</resources>
